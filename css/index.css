@@ -98,6 +98,9 @@ body {
     .section.section--article.section--reverse .section__title {
         text-align: right;
     }
+    .section.section--article.section--reverse .text .text__sentence {
+        text-align: right;
+    }
 }
 .section.section--article .text .text__sentence {
   font-size: 18px;
@@ -136,7 +139,13 @@ body {
 }
 @media (min-width: 1024px) {
     .section.section--article .section__image {
-        width: 45%;
+        width: 35%;
+        object-fit: contain;
+    }
+}
+@media (min-width: 1800px) {
+    .section.section--article .section__image {
+        width: 30%;
         object-fit: contain;
     }
 }
@@ -173,15 +182,6 @@ body {
     margin: 20px;
     text-align: center;
     position: relative;
-}
-.section.section--team .list .list__item:before {
-    border-radius: 50%;
-    z-index: -1;
-    content: ' ';
-    background-color: #A4D5ED;
-    width: 280px;
-    height: 280px;
-    position: absolute;
 }
 .section.section--team .list .list__item .item__image {
     border-radius: 50%;
