@@ -19,14 +19,15 @@ img {
     max-width: 100%;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 /**
   * Section intro
   **/
-.section.section--intro{
-    background-image: url('https://images.unsplash.com/photo-1639425620091-312639de647d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+
+.section.section--intro {
+    background-image: url("../images/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +39,8 @@ body {
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", Arial, sans-serif;
+    text-shadow: 1px 1px #000;
 }
 .section.section--intro .section__title {
     text-transform: uppercase;
@@ -46,12 +48,12 @@ body {
 }
 @media (min-width: 768px) {
     .section.section--intro .section__title {
-        font-size: 48px
+        font-size: 48px;
     }
 }
 @media (min-width: 1024px) {
     .section.section--intro .section__title {
-        font-size: 60px
+        font-size: 60px;
     }
 }
 .section.section--intro .section__subtitle {
@@ -61,12 +63,12 @@ body {
 }
 @media (min-width: 768px) {
     .section.section--intro .section__subtitle {
-        font-size: 32px
+        font-size: 32px;
     }
 }
 @media (min-width: 1024px) {
     .section.section--intro .section__subtitle {
-        font-size: 48px
+        font-size: 48px;
     }
 }
 
@@ -76,6 +78,9 @@ body {
 .section.section--article {
     background-color: #f8f8f8;
     padding: 20px;
+}
+.section.section--article.section--white {
+    background-color: #fff;
 }
 @media (min-width: 1024px) {
     .section.section--article {
@@ -89,23 +94,14 @@ body {
 }
 .section.section--article .section__title {
     font-size: 36px;
-    text-transform: uppercase;
     margin: 12px 0;
     text-transform: uppercase;
     width: 100%;
 }
-@media (min-width: 1024px) {
-    .section.section--article.section--reverse .section__title {
-        text-align: right;
-    }
-    .section.section--article.section--reverse .text .text__sentence {
-        text-align: right;
-    }
-}
 .section.section--article .text .text__sentence {
-  font-size: 18px;
-  margin: 5px 0;
-  text-align: justify;
+    font-size: 18px;
+    margin: 5px 0;
+    text-align: justify;
 }
 @media (min-width: 768px) {
     .section.section--article .text {
@@ -119,8 +115,18 @@ body {
     }
     .section.section--article .text .text__sentence {
         margin: 20px 0;
-        text-align: justify;
-        font-size: 20px
+        font-size: 20px;
+    }
+}
+@media (min-width: 1024px) {
+    .section.section--article .text .text__sentence {
+        font-size: 22px;
+    }
+    .section.section--article.section--reverse .section__title {
+        text-align: right;
+    }
+    .section.section--article.section--reverse .text .text__sentence {
+        direction: rtl;
     }
 }
 .section.section--article .text .text__sentence span {
@@ -135,7 +141,7 @@ body {
 }
 .section.section--article .section__image {
     margin-top: 12px;
-    width: 100%
+    width: 100%;
 }
 @media (min-width: 1024px) {
     .section.section--article .section__image {
@@ -156,9 +162,9 @@ body {
 .section.section--highlight {
     padding: 10vh 0;
     text-align: center;
-    background-color: #999;
+    background-color: #e8d1dc;
 }
-.section.section--highlight .section__title{
+.section.section--highlight .section__title {
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -168,9 +174,25 @@ body {
 /**
   * Section team
   **/
+.section.section--team {
+    display: flex;
+    flex-flow: column;
+}
+.section.section--team .section__title {
+    font-size: 36px;
+    margin: 12px 0;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+@media (min-width: 1024px) {
+    .section.section--team .section__title {
+        line-height: 200px;
+    }
+}
 @media (min-width: 1024px) {
     .section.section--team .list {
-        height: 100vh;
+        height: calc(100vh - 224px);
         display: flex;
         flex-flow: row;
         justify-content: space-around;
@@ -202,7 +224,7 @@ body {
   * Section gifts
   **/
 .section.section--gifts {
-    background-color: #999;
+    background-color: #cfbac4;
     color: #fff;
     padding: 20px;
 }
@@ -230,15 +252,21 @@ body {
         flex: 1;
     }
 }
-.section.section--gifts .text .text__sentece {
-    text-align: justify;
+.section.section--gifts .text .text__sentence {
+    text-align: center;
     margin-bottom: 10px;
     font-size: 18px;
-    line-height: 20px
+    line-height: 20px;
+}
+@media (min-width: 768px) {
+    .section.section--gifts .text .text__sentence {
+        text-align: justify;
+        font-size: 20px;
+    }
 }
 @media (min-width: 1024px) {
-    .section.section--gifts .text .text__sentece {
-        font-size: 24px;
+    .section.section--gifts .text .text__sentence {
+        font-size: 22px;
     }
 }
 .section.section--gifts .contact {
