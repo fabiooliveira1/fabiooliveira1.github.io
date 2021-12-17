@@ -40,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: "Comfortaa", Arial, sans-serif;
-    text-shadow: 1px 1px #000;
+    text-shadow: 1px 2px #000;
 }
 .section.section--intro .section__title {
     text-transform: uppercase;
